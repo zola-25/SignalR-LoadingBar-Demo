@@ -1,0 +1,32 @@
+﻿@model LoadViewModel
+
+<div class="text-center">
+
+    <div class="form-group">
+        <label asp-for="Seconds">Number of Seconds</label>
+        <input asp-for="Seconds" type="number" class="form-control" aria-describedby="emailHelp" min="1" step="1" value="20">
+    </div>
+
+    <button id="btn-load" type="button" class="btn btn-primary">Load</button>
+    
+    <div id="div-loading" class="div-loading text-center mt-5" style="display: none">
+
+        <div class="progress mx-auto mt-5" style="max-width: 300px;">
+            <div class="progress-bar bg-dark"
+                 role="progressbar"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-valuenow="0">
+            </div>
+        </div>
+
+        <div class="text-center mt-3 mb-3">
+            <button type="button" id="loading-cancel" class="btn btn-sm btn-outline-secondary">Cancel</button>
+        </div>
+    </div>
+    <br />
+    <div id="final-result" class="mt-5">
+
+    </div>
+
+</div>
